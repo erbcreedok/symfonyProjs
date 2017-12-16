@@ -1,0 +1,222 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: admin
+ * Date: 12.06.17
+ * Time: 14:35
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+
+/**
+ * Stock
+ *
+ * @ORM\Table(name="stock")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\AthleteRepository")
+ */
+
+class Stock
+{
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="productCode", type="string", length=255)
+     */
+    private $productCode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="productName", type="string", length=255)
+     */
+    private $productName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="productDescription", type="string", length=255)
+     */
+    private $productDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="stockValue", type="string", length=255)
+     */
+    private $stockValue;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="costInGBP", type="string", length=255)
+     */
+    private $costInGBP;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="discontinued", type="string", length=255)
+     */
+    private $discontinued;
+
+
+    /**
+     * Set productCode
+     *
+     * @param string $productCode
+     *
+     * @return Stock
+     */
+    public function setProductCode($productCode)
+    {
+        $this->productCode = $productCode;
+
+        return $this;
+    }
+
+    /**
+     * Get productCode
+     *
+     * @return string
+     */
+    public function getProductCode()
+    {
+        return $this->productCode;
+    }
+
+
+    /**
+     * Set productName
+     *
+     * @param string $productName
+     *
+     * @return Stock
+     */
+    public function setProductName($productName)
+    {
+        $this->productName= $productName;
+
+        return $this;
+    }
+
+    /**
+     * Get productName
+     *
+     * @return string
+     */
+    public function getProductName()
+    {
+        return $this->productName;
+    }
+
+    /**
+     * Set productDescription
+     *
+     * @param string $productDescription
+     *
+     * @return Stock
+     */
+    public function setProductDescription($productDescription)
+    {
+        $this->productDescription= $productDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get productDescription
+     *
+     * @return string
+     */
+    public function getProductDescription()
+    {
+        return $this->productDescription;
+    }
+
+    /**
+     * Set stockValue
+     *
+     * @param string $stockValue
+     *
+     * @return Stock
+     */
+    public function setStockValue($stockValue)
+    {
+        $this->stockValue= $stockValue;
+
+        return $this;
+    }
+
+    /**
+     * Get stockValue
+     *
+     * @return string
+     */
+    public function getStockValue()
+    {
+        return $this->stockValue;
+    }
+
+
+    /**
+     * Set costInGBP
+     *
+     * @param string $costInGBP
+     *
+     * @return Stock
+     */
+    public function setCostInGBP($costInGBP)
+    {
+        $this->costInGBP = $costInGBP;
+
+        return $this;
+    }
+
+    /**
+     * Get costInGBP
+     *
+     * @return string
+     */
+    public function getCostInGBP()
+    {
+        return $this->costInGBP;
+    }
+
+    /**
+     * Set discontinued
+     *
+     * @param string $discontinued
+     *
+     * @return Stock
+     */
+    public function setDiscontinued($discontinued)
+    {
+        $this->discontinued = $discontinued;
+
+        return $this;
+    }
+
+    /**
+     * Get discontinued
+     *
+     * @return string
+     */
+    public function getDiscontinued()
+    {
+        return $this->discontinued;
+    }
+}
